@@ -1,8 +1,7 @@
-import { URL, URLSearchParams, UrlWithStringQuery } from 'url';
+import { URL } from 'url';
 
 export default function createItem(url: string) {
-  const myURL = new URL(url);
-  console.log(myURL);
+  const myURL: URL = new URL(url);
   const text = myURL.searchParams.get('text');
   const completed = myURL.searchParams.get('completed') === "true";
 
